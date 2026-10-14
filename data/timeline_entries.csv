@@ -1,0 +1,12 @@
+date,category,title,description,doc_ids,video_ids,image
+2026-02-03,Permit,Building permit issued,"Permit BP-26-0142 issued by the City. The permit card shows expiration date 2026-08-02.",DOC-001,,
+2026-02-10,Plans,Floor plan A-101 Rev 0 posted,"Sheet A-101, Revision 0, listed in Procore.",DOC-002,,
+2026-03-05,Site video,Site video recorded,"Video file recorded at 08:14. Original camera file name: VID_20260305_081422.mp4.",,VID-001,
+2026-03-18,Inspection,Foundation inspection approved,"Inspection result for the foundation: Approved. Inspector ID 0457.",DOC-003,,
+2026-04-07,Plans,Floor plan A-101 Rev 1 posted,"Sheet A-101, Revision 1, listed in Procore and marked as superseding Rev 0. Overlay against Rev 0 shows: window W1 on the west wall drawn wider (3-0 to 5-6); interior door opening moved; revision number and date updated in the title block.","DOC-002;DOC-004",,img/A-101_Rev0_vs_Rev1.png
+2026-04-22,Site video,Site video recorded,"Video file recorded at 16:30. Original camera file name: VID_20260422_163010.mp4.",,VID-002,
+2026-05-14,Inspection,Framing inspection failed,"Correction notice lists two items: (1) missing hold-down at the west wall, grid line 1; (2) header size at W1 does not match sheet A-101 Rev 1. Re-inspection required.",DOC-005,,
+2026-05-29,Site video,Site video recorded,"Video file recorded at 09:55. Original camera file name: VID_20260529_095507.mp4.",,VID-003,
+2026-06-02,Permit,Permit expiration date changed,"Permit card revised (r2), detected at the 19:00 check. Expiration date changed from 2026-08-02 to 2026-12-01. Status now reads 'Issued - extension granted'. File size changed by +0.01 KB.","DOC-001;DOC-007",,
+2026-06-02,Procore,Procore file list changed,"At the 19:00 check: RFI 007 response added; Site Logistics Draft no longer listed; the A-101 Rev 1 file name changed from one space to two spaces between 'Floor' and 'Plan' (content unchanged, same hash).","DOC-008;DOC-006;DOC-004",,
+2026-07-08,Inspection,Framing re-inspection approved,"Inspection result for the framing re-inspection: Approved. Inspector ID 0457.",DOC-009,,

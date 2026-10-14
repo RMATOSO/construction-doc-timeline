@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Record Timeline</title>
+<style>
+:root{--ink:#14213d;--muted:#5c6577;--line:#d9dee7;--bg:#f6f7f9;--card:#fff;--accent:#1d4e89;--red:#d62828;--blue:#1e5adc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 64px}
+header{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:20px}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--accent);margin:0 0 6px;font-weight:600}
+h1{font-size:28px;margin:0 0 10px;line-height:1.2}
+.meta{display:flex;flex-wrap:wrap;gap:6px 22px;color:var(--muted);font-size:13px;margin:0;padding:0;list-style:none}
+.meta b{color:var(--ink);font-weight:600}
+.notice{background:#fff4e5;border:1px solid #f0c27a;border-radius:6px;padding:10px 14px;font-size:13px;margin:16px 0}
+.check{background:#eaf4ec;border:1px solid #9cc9a6;border-radius:6px;padding:10px 14px;font-size:13px;margin:0 0 18px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.filters button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+h2.month{font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:28px 0 10px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.entry{display:grid;grid-template-columns:78px 1fr;gap:16px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:0 0 12px;break-inside:avoid}
+.entry.has-qr{grid-template-columns:78px 1fr 150px}
+.when{text-align:center}
+.day{display:block;font-size:30px;font-weight:700;line-height:1}
+.mon{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.cat{margin:0;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:600}
+h3{margin:2px 0 6px;font-size:17px}
+.body p{margin:0 0 8px}
+.src{list-style:none;margin:8px 0 0;padding:0;font-size:13px}
+.src li{padding:5px 0;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.src a{color:var(--accent);font-weight:600;word-break:break-all}
+.tag{background:#eef1f6;border-radius:4px;padding:1px 6px;font-size:12px;color:var(--muted)}
+.hash{font-family:ui-monospace,Consolas,monospace;font-size:12px;color:var(--muted)}
+.qrs{display:flex;flex-direction:column;gap:10px;align-items:center}
+.qr{margin:0;text-align:center}
+.qr svg{width:128px;height:128px}
+.qr figcaption{font-size:11px;color:var(--muted)}
+.overlay{margin:12px 0 0}
+.overlay img{width:100%;max-width:620px;display:block;border:1px solid var(--line);border-radius:4px;background:#fff}
+.overlay figcaption{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:-6px}
+.sw.red{background:var(--red)}.sw.blue{background:var(--blue)}.sw.grey{background:#aaa}
+footer{margin-top:32px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+@media (max-width:640px){
+  .entry,.entry.has-qr{grid-template-columns:1fr}
+  .when{text-align:left;display:flex;gap:8px;align-items:baseline}
+  .qrs{align-items:flex-start}
+}
+@media print{
+  body{background:#fff;font-size:11pt}
+  .wrap{max-width:none;padding:0}
+  .filters{display:none}
+  .entry{border:1px solid #999;border-left:4px solid #333;box-shadow:none}
+  .src a::after{content:" (" attr(href) ")";font-weight:400;color:#555}
+  .notice,.check{border-color:#999;background:#fff}
+  h2.month{break-after:avoid}
+  @page{margin:16mm}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="eyebrow">Project record timeline</p>
+  <h1>Sample Residence - 100 Example Lane</h1>
+  <ul class="meta">
+    <li>Period: <b>2026-02-03 to 2026-07-08</b></li>
+    <li>Entries: <b>11</b></li>
+    <li>Documents logged: <b>9</b></li>
+    <li>Videos logged: <b>3</b></li>
+    <li>Generated: <b>2026-10-13</b></li>
+    <li>Prepared by: <b>Rodrigo Matoso</b></li>
+  </ul>
+</header>
+<p class="notice"><b>Sample with fictional data.</b> The project, permit, plans, inspections and videos are invented to show the format. In a real project, documents and videos stay in the client's own Google Drive with restricted sharing, and the QR codes encode those Drive links directly.</p>
+<p class="check">Integrity check passed when this report was generated: all 9 documents and 3 videos match the SHA-256 hashes recorded in the log. Each entry states only what the record shows.</p>
+<nav class="filters" aria-label="Filter entries"><button type="button" data-cat="All" aria-pressed="true">All</button><button type="button" data-cat="Inspection" aria-pressed="false">Inspection</button><button type="button" data-cat="Permit" aria-pressed="false">Permit</button><button type="button" data-cat="Plans" aria-pressed="false">Plans</button><button type="button" data-cat="Procore" aria-pressed="false">Procore</button><button type="button" data-cat="Site video" aria-pressed="false">Site video</button></nav>
+<h2 class="month">February 2026</h2>
+    <article class="entry" data-cat="Permit">
+      <div class="when"><span class="day">03</span><span class="mon">Feb 2026</span></div>
+      <div class="body">
+        <p class="cat">Permit</p>
+        <h3>Building permit issued</h3>
+        <p>Permit BP-26-0142 issued by the City. The permit card shows expiration date 2026-08-02.</p>
+        <ul class="src"><li><a href="files/BP-26-0142_Permit_Card_r1.pdf">BP-26-0142_Permit_Card_r1.pdf</a><span class="tag">DOC-001</span><span class="tag">City portal</span><span class="tag">r1</span><span class="hash" title="SHA-256 283451b39104af5e063197eb38fde992eb596dd3701c0d61fae690861714b57b">SHA-256 283451b39104</span></li></ul>
+        
+      </div>
+      
+    </article>
+    <article class="entry" data-cat="Plans">
+      <div class="when"><span class="day">10</span><span class="mon">Feb 2026</span></div>
+      <div class="body">
+        <p class="cat">Plans</p>
+        <h3>Floor plan A-101 Rev 0 posted</h3>
+        <p>Sheet A-101, Revision 0, listed in Procore.</p>
+        <ul class="src"><li><a href="files/A-101_Floor_Plan_Rev0.pdf">A-101_Floor_Plan_Rev0.pdf</a><span class="tag">DOC-002</span><span class="tag">Procore</span><span class="tag">Rev 0</span><span class="hash" title="SHA-256 25dc9ad63286499358acad126c6c04d16875d93d312dbb41ebc7d2a630756d47">SHA-256 25dc9ad63286</span></li></ul>
+        
+      </div>
+      
+    </article><h2 class="month">March 2026</h2>
+    <article class="entry has-qr" data-cat="Site video">
+      <div class="when"><span class="day">05</span><span class="mon">Mar 2026</span></div>
+      <div class="body">
+        <p class="cat">Site video</p>
+        <h3>Site video recorded</h3>
+        <p>Video file recorded at 08:14. Original camera file name: VID_20260305_081422.mp4.</p>
+        <ul class="src"><li><a href="https://rmatoso.github.io/construction-doc-timeline/videos/2026-03-05_0814_foundation-pour.mp4">2026-03-05_0814_foundation-pour.mp4</a><span class="tag">VID-001</span><span class="tag">original: VID_20260305_081422.mp4</span><span class="hash" title="SHA-256 95d9d0fb6052cd9f9e54e31c2b7e92ace55c2eaaee011abe1962ea9a892022c4">SHA-256 95d9d0fb6052</span></li></ul>
+        
+      </div>
+      <div class="qrs"><figure class="qr"><svg viewBox="0 0 171 171" class="segno"><path transform="scale(3)" class="qrline" stroke="#14213d" d="M4 4.5h7m1 0h1m4 0h2m4 0h1m1 0h3m2 0h1m2 0h2m1 0h1m2 0h1m1 0h1m2 0h1m1 0h7m-49 1h1m5 0h1m2 0h2m2 0h1m1 0h2m2 0h3m2 0h1m1 0h1m2 0h1m3 0h3m1 0h4m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m4 0h2m1 0h1m1 0h1m2 0h6m2 0h1m1 0h1m2 0h1m1 0h1m4 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m2 0h2m2 0h1m1 0h1m2 0h1m1 0h1m3 0h1m6 0h1m3 0h2m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m2 0h2m5 0h3m1 0h6m1 0h4m2 0h3m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m1 0h2m1 0h2m1 0h4m1 0h1m2 0h1m3 0h2m5 0h3m2 0h1m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-39 1h1m2 0h3m2 0h2m1 0h2m3 0h3m1 0h1m3 0h1m1 0h1m2 0h1m-39 1h7m1 0h2m1 0h4m1 0h2m3 0h7m1 0h3m2 0h1m2 0h3m2 0h2m3 0h1m-49 1h6m1 0h1m2 0h3m1 0h2m2 0h1m8 0h2m1 0h1m1 0h2m7 0h6m-47 1h1m1 0h2m1 0h3m2 0h1m2 0h1m1 0h1m1 0h1m2 0h2m3 0h5m1 0h2m1 0h2m1 0h2m2 0h1m1 0h3m1 0h2m-49 1h4m1 0h1m7 0h1m1 0h2m1 0h6m4 0h2m2 0h1m2 0h1m1 0h1m1 0h3m2 0h2m1 0h2m-48 1h1m3 0h2m1 0h1m1 0h1m2 0h1m3 0h2m2 0h1m3 0h2m1 0h3m2 0h1m1 0h3m1 0h3m1 0h1m2 0h1m-45 1h1m1 0h1m2 0h2m1 0h1m1 0h3m3 0h1m1 0h3m3 0h1m2 0h2m1 0h1m2 0h3m1 0h1m1 0h3m2 0h1m-47 1h3m2 0h2m2 0h5m1 0h5m1 0h3m4 0h2m1 0h4m1 0h1m1 0h3m2 0h6m-47 1h3m3 0h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m3 0h1m1 0h2m2 0h4m5 0h4m1 0h1m2 0h2m-49 1h1m3 0h1m1 0h2m1 0h3m3 0h1m2 0h2m1 0h1m1 0h2m3 0h3m5 0h2m1 0h1m2 0h2m1 0h2m-46 1h2m4 0h1m4 0h1m1 0h3m1 0h1m1 0h1m1 0h3m2 0h2m1 0h2m1 0h1m6 0h1m1 0h2m1 0h3m-47 1h1m1 0h2m1 0h4m1 0h1m1 0h1m1 0h1m3 0h1m2 0h2m2 0h7m2 0h3m1 0h2m1 0h2m1 0h1m1 0h2m-49 1h1m1 0h1m2 0h1m3 0h2m1 0h1m1 0h1m1 0h1m2 0h1m3 0h1m2 0h2m1 0h1m2 0h2m3 0h2m1 0h1m1 0h3m2 0h2m-48 1h2m1 0h1m1 0h2m3 0h1m1 0h1m1 0h1m4 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m3 0h4m1 0h1m1 0h2m2 0h1m-47 1h3m2 0h1m1 0h3m1 0h1m1 0h3m2 0h2m1 0h1m8 0h2m3 0h2m4 0h2m-43 1h11m4 0h3m1 0h1m2 0h7m3 0h1m1 0h1m3 0h1m1 0h6m1 0h2m-49 1h2m1 0h2m3 0h2m4 0h4m3 0h2m3 0h2m1 0h4m1 0h1m2 0h2m1 0h1m3 0h1m-45 1h1m3 0h1m1 0h1m1 0h3m5 0h1m1 0h5m1 0h1m1 0h1m1 0h4m1 0h6m1 0h1m1 0h1m1 0h4m-46 1h1m1 0h1m3 0h2m2 0h2m6 0h3m3 0h5m4 0h1m4 0h1m3 0h1m1 0h1m-47 1h9m1 0h4m1 0h2m3 0h1m1 0h5m1 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h5m1 0h1m1 0h1m-49 1h4m1 0h1m2 0h2m1 0h6m1 0h2m1 0h1m1 0h1m1 0h1m2 0h5m4 0h2m2 0h1m1 0h1m-43 1h1m1 0h2m1 0h2m2 0h1m3 0h3m1 0h3m2 0h1m5 0h3m3 0h3m1 0h2m1 0h5m1 0h1m-49 1h1m4 0h1m2 0h2m1 0h3m1 0h1m2 0h1m6 0h2m3 0h3m4 0h1m2 0h1m6 0h1m-47 1h1m1 0h1m2 0h2m3 0h1m2 0h3m1 0h1m2 0h1m3 0h1m5 0h4m1 0h3m3 0h1m2 0h1m2 0h1m-48 1h1m1 0h2m2 0h2m1 0h3m4 0h2m2 0h3m1 0h2m2 0h3m1 0h1m1 0h2m3 0h1m7 0h1m-49 1h3m3 0h2m1 0h3m1 0h1m1 0h1m2 0h1m1 0h2m3 0h3m1 0h2m2 0h1m2 0h1m2 0h5m1 0h2m1 0h1m-49 1h2m1 0h3m1 0h1m1 0h6m1 0h1m2 0h3m1 0h1m1 0h1m3 0h3m1 0h1m1 0h2m3 0h1m1 0h2m1 0h1m-43 1h2m1 0h1m1 0h2m1 0h2m1 0h1m1 0h4m1 0h2m2 0h3m1 0h2m3 0h1m1 0h3m2 0h2m4 0h2m-47 1h1m2 0h1m7 0h1m1 0h2m2 0h1m2 0h1m1 0h3m1 0h1m1 0h1m1 0h3m2 0h2m1 0h1m2 0h1m1 0h1m-46 1h3m3 0h4m1 0h4m1 0h2m4 0h1m1 0h3m3 0h2m3 0h2m1 0h2m2 0h1m1 0h1m1 0h3m-49 1h1m1 0h4m1 0h1m1 0h1m1 0h2m1 0h1m3 0h6m1 0h2m1 0h5m3 0h2m2 0h2m1 0h1m2 0h1m-46 1h1m3 0h6m1 0h1m7 0h1m2 0h1m1 0h2m1 0h1m2 0h6m1 0h1m1 0h1m1 0h2m3 0h2m-48 1h3m5 0h1m1 0h1m1 0h2m1 0h2m2 0h5m1 0h1m1 0h2m2 0h1m1 0h2m1 0h2m4 0h1m4 0h1m-49 1h3m3 0h1m2 0h2m3 0h1m1 0h1m1 0h1m3 0h6m5 0h2m1 0h1m1 0h7m1 0h3m-41 1h2m2 0h1m1 0h5m3 0h1m3 0h1m1 0h2m1 0h2m1 0h1m2 0h2m1 0h1m3 0h1m-45 1h7m1 0h1m3 0h1m3 0h1m2 0h4m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m2 0h1m3 0h1m1 0h1m1 0h2m1 0h2m-49 1h1m5 0h1m1 0h1m1 0h1m1 0h6m2 0h1m1 0h1m3 0h1m1 0h2m2 0h1m4 0h4m3 0h1m2 0h1m-48 1h1m1 0h3m1 0h1m1 0h2m2 0h5m5 0h5m4 0h1m1 0h1m1 0h10m1 0h3m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h2m10 0h3m5 0h2m1 0h1m1 0h2m1 0h5m-49 1h1m1 0h3m1 0h1m1 0h1m5 0h1m2 0h2m1 0h2m1 0h1m1 0h2m1 0h1m2 0h9m5 0h1m1 0h2m-49 1h1m5 0h1m1 0h1m4 0h1m1 0h1m4 0h2m1 0h1m2 0h1m1 0h1m1 0h4m3 0h3m1 0h2m1 0h1m3 0h1m-49 1h7m2 0h3m1 0h2m1 0h4m4 0h1m4 0h1m1 0h1m2 0h6m3 0h2m1 0h3"/></svg><figcaption>Scan to open the video of 2026-03-05</figcaption></figure></div>
+    </article>
+    <article class="entry" data-cat="Inspection">
+      <div class="when"><span class="day">18</span><span class="mon">Mar 2026</span></div>
+      <div class="body">
+        <p class="cat">Inspection</p>
+        <h3>Foundation inspection approved</h3>
+        <p>Inspection result for the foundation: Approved. Inspector ID 0457.</p>
+        <ul class="src"><li><a href="files/INSP-0318_Foundation_Result.pdf">INSP-0318_Foundation_Result.pdf</a><span class="tag">DOC-003</span><span class="tag">City portal</span><span class="tag">-</span><span class="hash" title="SHA-256 d3dc4226e6bd348f05fc81926d7897dbc3956f785d0e3cff794b5cc0df2f535a">SHA-256 d3dc4226e6bd</span></li></ul>
+        
+      </div>
+      
+    </article><h2 class="month">April 2026</h2>
+    <article class="entry" data-cat="Plans">
+      <div class="when"><span class="day">07</span><span class="mon">Apr 2026</span></div>
+      <div class="body">
+        <p class="cat">Plans</p>
+        <h3>Floor plan A-101 Rev 1 posted</h3>
+        <p>Sheet A-101, Revision 1, listed in Procore and marked as superseding Rev 0. Overlay against Rev 0 shows: window W1 on the west wall drawn wider (3-0 to 5-6); interior door opening moved; revision number and date updated in the title block.</p>
+        <ul class="src"><li><a href="files/A-101_Floor_Plan_Rev0.pdf">A-101_Floor_Plan_Rev0.pdf</a><span class="tag">DOC-002</span><span class="tag">Procore</span><span class="tag">Rev 0</span><span class="hash" title="SHA-256 25dc9ad63286499358acad126c6c04d16875d93d312dbb41ebc7d2a630756d47">SHA-256 25dc9ad63286</span></li><li><a href="files/A-101_Floor_Plan_Rev1.pdf">A-101_Floor_Plan_Rev1.pdf</a><span class="tag">DOC-004</span><span class="tag">Procore</span><span class="tag">Rev 1</span><span class="hash" title="SHA-256 476cbbc328a4d89fc39e3a0cae64dba941abb06a8cef21c3e201f3c10b8b93a8">SHA-256 476cbbc328a4</span></li></ul>
+        <figure class="overlay"><a href="img/A-101_Rev0_vs_Rev1.png"><img src="img/A-101_Rev0_vs_Rev1.png" alt="Overlay comparison"></a><figcaption><span class="sw red"></span>removed in new version <span class="sw blue"></span>added in new version <span class="sw grey"></span>unchanged</figcaption></figure>
+      </div>
+      
+    </article>
+    <article class="entry has-qr" data-cat="Site video">
+      <div class="when"><span class="day">22</span><span class="mon">Apr 2026</span></div>
+      <div class="body">
+        <p class="cat">Site video</p>
+        <h3>Site video recorded</h3>
+        <p>Video file recorded at 16:30. Original camera file name: VID_20260422_163010.mp4.</p>
+        <ul class="src"><li><a href="https://rmatoso.github.io/construction-doc-timeline/videos/2026-04-22_1630_framing-west-wall.mp4">2026-04-22_1630_framing-west-wall.mp4</a><span class="tag">VID-002</span><span class="tag">original: VID_20260422_163010.mp4</span><span class="hash" title="SHA-256 79ab580350bb77fd6531367d49d81dd336f153de88b99dfcbd78212982822567">SHA-256 79ab580350bb</span></li></ul>
+        
+      </div>
+      <div class="qrs"><figure class="qr"><svg viewBox="0 0 171 171" class="segno"><path transform="scale(3)" class="qrline" stroke="#14213d" d="M4 4.5h7m1 0h3m2 0h1m1 0h2m2 0h2m1 0h1m4 0h1m1 0h2m2 0h3m1 0h1m2 0h1m1 0h7m-49 1h1m5 0h1m2 0h4m2 0h1m1 0h1m1 0h5m2 0h3m1 0h1m2 0h1m2 0h5m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m3 0h1m2 0h1m3 0h2m2 0h2m2 0h2m3 0h2m1 0h1m3 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h4m1 0h1m1 0h1m1 0h3m1 0h1m2 0h2m1 0h2m6 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m4 0h3m1 0h1m2 0h1m3 0h9m2 0h1m1 0h2m5 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m1 0h1m2 0h1m1 0h5m2 0h1m1 0h1m3 0h3m1 0h9m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-41 1h1m2 0h2m2 0h2m1 0h2m2 0h1m3 0h4m5 0h1m3 0h2m-40 1h1m1 0h1m1 0h6m1 0h2m1 0h2m1 0h1m1 0h7m2 0h1m1 0h4m3 0h1m2 0h3m1 0h2m1 0h1m-40 1h4m2 0h2m1 0h1m1 0h4m1 0h2m2 0h1m1 0h3m1 0h3m6 0h1m2 0h2m-49 1h3m1 0h4m1 0h2m1 0h1m1 0h4m4 0h2m1 0h2m2 0h1m3 0h3m3 0h1m1 0h1m4 0h3m-47 1h1m2 0h1m1 0h4m1 0h2m3 0h1m1 0h1m1 0h6m1 0h1m7 0h8m1 0h1m1 0h1m-48 1h2m1 0h4m6 0h1m1 0h3m3 0h1m3 0h1m1 0h1m1 0h1m1 0h3m1 0h4m2 0h1m1 0h3m-46 1h1m1 0h3m2 0h2m2 0h1m1 0h2m3 0h2m1 0h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h5m1 0h2m2 0h1m3 0h2m-49 1h7m4 0h2m1 0h1m1 0h1m1 0h1m8 0h1m3 0h1m6 0h1m2 0h1m1 0h2m1 0h1m1 0h1m-47 1h1m2 0h1m1 0h4m1 0h1m1 0h2m2 0h1m4 0h1m1 0h3m1 0h1m2 0h2m1 0h3m1 0h2m1 0h3m-44 1h4m1 0h1m1 0h3m1 0h2m4 0h2m3 0h11m2 0h3m2 0h2m1 0h1m1 0h1m-47 1h2m3 0h1m2 0h2m2 0h1m2 0h1m2 0h2m2 0h2m1 0h4m3 0h2m2 0h4m1 0h1m2 0h5m-48 1h2m3 0h2m2 0h2m1 0h2m5 0h2m1 0h1m5 0h3m1 0h4m1 0h1m1 0h2m1 0h2m1 0h3m-47 1h1m1 0h1m4 0h1m4 0h1m2 0h2m3 0h1m3 0h3m1 0h1m1 0h7m1 0h2m1 0h2m1 0h1m-46 1h6m2 0h5m1 0h1m1 0h1m3 0h2m1 0h2m5 0h1m1 0h2m1 0h3m2 0h3m1 0h1m1 0h1m-46 1h1m4 0h3m2 0h1m1 0h2m1 0h1m3 0h1m1 0h7m7 0h1m5 0h1m3 0h2m-49 1h1m3 0h5m1 0h1m1 0h3m2 0h1m2 0h7m4 0h1m1 0h2m2 0h1m2 0h5m2 0h2m-47 1h3m3 0h2m2 0h2m3 0h2m1 0h1m1 0h1m3 0h2m1 0h1m4 0h1m1 0h1m3 0h1m3 0h1m-45 1h1m3 0h1m1 0h1m1 0h1m5 0h2m2 0h2m1 0h2m1 0h1m1 0h2m1 0h4m2 0h3m2 0h1m1 0h1m1 0h1m3 0h1m-49 1h1m2 0h2m3 0h4m1 0h1m2 0h3m1 0h1m1 0h1m3 0h2m6 0h1m1 0h1m2 0h2m3 0h1m2 0h2m-49 1h11m1 0h3m2 0h2m1 0h8m1 0h1m1 0h1m1 0h1m1 0h2m1 0h8m2 0h1m-46 1h1m1 0h1m1 0h1m1 0h1m4 0h3m1 0h1m3 0h3m1 0h3m3 0h1m2 0h2m1 0h1m3 0h1m-43 1h5m1 0h1m2 0h2m5 0h3m3 0h1m2 0h1m1 0h1m1 0h2m1 0h2m1 0h2m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1m-48 1h2m2 0h1m1 0h1m2 0h2m1 0h1m1 0h1m2 0h6m4 0h1m7 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m-49 1h1m1 0h3m1 0h2m3 0h1m5 0h2m1 0h1m1 0h2m3 0h2m2 0h1m4 0h2m1 0h2m1 0h1m3 0h1m1 0h1m-49 1h1m2 0h1m1 0h1m2 0h2m4 0h1m1 0h3m2 0h4m1 0h1m1 0h2m1 0h1m1 0h2m6 0h4m1 0h1m-47 1h1m1 0h6m2 0h1m1 0h1m2 0h4m2 0h3m4 0h2m4 0h3m5 0h2m3 0h2m-48 1h2m1 0h1m2 0h1m1 0h3m1 0h2m2 0h1m1 0h2m2 0h2m8 0h1m3 0h1m2 0h2m3 0h1m1 0h2m-48 1h1m2 0h1m1 0h2m1 0h1m2 0h2m1 0h2m9 0h1m2 0h6m1 0h1m2 0h1m1 0h8m-48 1h1m1 0h1m1 0h1m2 0h1m1 0h3m1 0h3m4 0h2m2 0h2m1 0h2m1 0h1m2 0h1m1 0h1m3 0h1m1 0h4m2 0h1m-49 1h2m1 0h1m1 0h4m1 0h3m2 0h3m2 0h1m3 0h1m2 0h2m1 0h9m1 0h1m1 0h1m2 0h1m1 0h2m-49 1h3m2 0h1m2 0h1m2 0h2m4 0h1m1 0h2m1 0h2m1 0h2m1 0h2m1 0h2m1 0h1m2 0h1m4 0h2m3 0h2m-48 1h1m3 0h3m1 0h3m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m1 0h3m2 0h1m1 0h1m-48 1h3m4 0h2m2 0h1m1 0h1m1 0h4m1 0h2m2 0h1m2 0h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h2m2 0h1m1 0h1m-48 1h3m3 0h4m1 0h2m2 0h2m1 0h9m4 0h2m1 0h1m1 0h2m2 0h5m1 0h3m-41 1h7m1 0h1m2 0h1m2 0h1m3 0h1m1 0h5m1 0h1m1 0h1m3 0h1m3 0h1m3 0h1m-49 1h7m1 0h3m3 0h1m1 0h1m2 0h2m1 0h1m1 0h1m1 0h2m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h1m1 0h3m-49 1h1m5 0h1m1 0h1m4 0h2m3 0h1m1 0h1m1 0h1m3 0h1m3 0h1m1 0h1m1 0h7m3 0h1m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m3 0h8m2 0h10m1 0h1m2 0h1m1 0h3m1 0h6m2 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m1 0h1m4 0h3m2 0h1m2 0h1m3 0h1m4 0h1m2 0h6m-49 1h1m1 0h3m1 0h1m2 0h1m1 0h3m3 0h4m2 0h1m3 0h2m5 0h3m6 0h2m2 0h2m-49 1h1m5 0h1m1 0h1m5 0h1m3 0h2m1 0h1m1 0h3m2 0h1m4 0h1m2 0h1m2 0h1m1 0h1m1 0h1m-44 1h7m4 0h1m1 0h1m1 0h1m1 0h6m1 0h1m1 0h4m1 0h3m1 0h3m2 0h2m1 0h1m1 0h1m1 0h2"/></svg><figcaption>Scan to open the video of 2026-04-22</figcaption></figure></div>
+    </article><h2 class="month">May 2026</h2>
+    <article class="entry" data-cat="Inspection">
+      <div class="when"><span class="day">14</span><span class="mon">May 2026</span></div>
+      <div class="body">
+        <p class="cat">Inspection</p>
+        <h3>Framing inspection failed</h3>
+        <p>Correction notice lists two items: (1) missing hold-down at the west wall, grid line 1; (2) header size at W1 does not match sheet A-101 Rev 1. Re-inspection required.</p>
+        <ul class="src"><li><a href="files/INSP-0514_Framing_Correction_Notice.pdf">INSP-0514_Framing_Correction_Notice.pdf</a><span class="tag">DOC-005</span><span class="tag">City portal</span><span class="tag">-</span><span class="hash" title="SHA-256 1679fb07288a4cda3a3f7da124303250f7952fc61746742f19af192e5c445ff3">SHA-256 1679fb07288a</span></li></ul>
+        
+      </div>
+      
+    </article>
+    <article class="entry has-qr" data-cat="Site video">
+      <div class="when"><span class="day">29</span><span class="mon">May 2026</span></div>
+      <div class="body">
+        <p class="cat">Site video</p>
+        <h3>Site video recorded</h3>
+        <p>Video file recorded at 09:55. Original camera file name: VID_20260529_095507.mp4.</p>
+        <ul class="src"><li><a href="https://rmatoso.github.io/construction-doc-timeline/videos/2026-05-29_0955_correction-work.mp4">2026-05-29_0955_correction-work.mp4</a><span class="tag">VID-003</span><span class="tag">original: VID_20260529_095507.mp4</span><span class="hash" title="SHA-256 a0c0e352ffc2ee903b384e6dab91dc8df916b3b2f07900342e61f176d884f561">SHA-256 a0c0e352ffc2</span></li></ul>
+        
+      </div>
+      <div class="qrs"><figure class="qr"><svg viewBox="0 0 171 171" class="segno"><path transform="scale(3)" class="qrline" stroke="#14213d" d="M4 4.5h7m1 0h3m2 0h1m1 0h2m2 0h3m3 0h2m2 0h2m2 0h3m1 0h1m2 0h1m1 0h7m-49 1h1m5 0h1m3 0h4m1 0h1m1 0h1m1 0h2m4 0h4m1 0h1m2 0h1m2 0h5m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m1 0h4m1 0h4m1 0h2m3 0h2m3 0h2m1 0h1m3 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h2m1 0h4m1 0h2m1 0h1m3 0h2m6 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m2 0h1m1 0h2m2 0h1m1 0h2m2 0h6m1 0h3m2 0h1m1 0h2m5 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m1 0h1m2 0h1m3 0h3m2 0h3m3 0h1m3 0h9m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-41 1h2m1 0h2m1 0h3m2 0h1m2 0h1m3 0h1m1 0h2m5 0h1m3 0h2m-40 1h1m1 0h1m1 0h5m1 0h2m3 0h1m1 0h1m2 0h6m2 0h1m1 0h4m3 0h1m2 0h3m1 0h2m1 0h1m-49 1h1m1 0h1m7 0h1m4 0h1m1 0h3m3 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h3m6 0h5m-46 1h2m1 0h1m3 0h1m2 0h1m3 0h3m7 0h1m1 0h1m3 0h3m3 0h1m1 0h1m3 0h1m1 0h2m-48 1h3m3 0h3m2 0h1m2 0h4m2 0h6m1 0h4m3 0h9m1 0h1m1 0h1m-48 1h2m2 0h3m4 0h3m2 0h3m1 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m1 0h3m4 0h1m1 0h3m-44 1h2m3 0h5m3 0h1m1 0h5m1 0h2m1 0h1m1 0h1m3 0h1m1 0h1m1 0h2m1 0h2m2 0h1m3 0h2m-49 1h2m4 0h1m5 0h2m1 0h2m1 0h3m6 0h1m3 0h2m2 0h4m2 0h1m1 0h2m3 0h1m-49 1h4m3 0h2m1 0h1m1 0h5m1 0h3m2 0h1m1 0h3m1 0h1m2 0h2m1 0h3m1 0h2m2 0h2m-45 1h4m1 0h2m1 0h1m1 0h2m1 0h4m1 0h1m4 0h11m2 0h1m1 0h1m3 0h1m1 0h1m1 0h1m-47 1h1m3 0h1m3 0h1m2 0h3m6 0h1m1 0h2m1 0h4m3 0h2m2 0h3m1 0h1m3 0h5m-48 1h2m2 0h3m2 0h1m1 0h4m3 0h3m1 0h1m5 0h3m1 0h6m3 0h3m1 0h3m-47 1h1m1 0h1m4 0h1m1 0h1m2 0h1m1 0h4m2 0h1m1 0h1m2 0h2m1 0h1m1 0h7m2 0h1m1 0h2m1 0h1m-46 1h3m1 0h3m1 0h2m1 0h2m1 0h1m1 0h1m3 0h2m2 0h1m2 0h1m2 0h1m1 0h2m1 0h4m1 0h3m1 0h1m1 0h1m-46 1h1m5 0h2m1 0h1m2 0h2m1 0h1m1 0h1m2 0h3m1 0h1m2 0h1m7 0h1m5 0h1m3 0h2m-49 1h1m3 0h5m1 0h6m1 0h1m3 0h6m1 0h1m2 0h1m1 0h2m2 0h1m1 0h6m2 0h2m-47 1h3m3 0h2m3 0h1m2 0h3m1 0h1m1 0h1m3 0h2m1 0h1m4 0h1m1 0h1m3 0h1m3 0h1m3 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m5 0h2m2 0h2m2 0h1m1 0h1m1 0h2m1 0h4m2 0h3m1 0h2m1 0h1m1 0h1m2 0h1m-48 1h1m1 0h1m1 0h1m3 0h4m1 0h1m2 0h3m1 0h1m1 0h1m3 0h2m6 0h1m1 0h1m3 0h1m3 0h1m2 0h2m-48 1h2m1 0h5m1 0h1m1 0h1m4 0h1m2 0h8m1 0h1m1 0h1m1 0h1m1 0h2m1 0h8m1 0h2m-49 1h4m3 0h3m5 0h3m6 0h1m1 0h3m3 0h1m2 0h2m1 0h1m3 0h1m5 0h1m-49 1h2m2 0h1m1 0h1m9 0h2m7 0h3m1 0h2m1 0h2m1 0h2m1 0h1m1 0h1m1 0h1m3 0h1m-47 1h3m2 0h1m3 0h3m3 0h1m1 0h4m1 0h3m2 0h2m7 0h1m1 0h1m1 0h1m1 0h3m2 0h2m-49 1h5m1 0h1m2 0h3m1 0h2m5 0h1m1 0h1m3 0h1m1 0h1m2 0h1m4 0h2m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m-44 1h1m1 0h2m4 0h2m1 0h3m3 0h1m1 0h1m3 0h4m1 0h2m6 0h2m3 0h2m-44 1h3m1 0h1m1 0h1m2 0h1m2 0h2m2 0h6m2 0h1m1 0h1m3 0h3m5 0h2m3 0h2m-49 1h2m1 0h2m2 0h1m1 0h2m3 0h1m1 0h2m2 0h1m3 0h1m8 0h1m3 0h1m2 0h2m5 0h2m-45 1h1m1 0h1m1 0h1m2 0h6m3 0h1m1 0h1m1 0h3m2 0h6m1 0h1m2 0h1m1 0h2m1 0h2m1 0h2m-48 1h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m1 0h4m1 0h1m2 0h4m1 0h2m1 0h1m1 0h2m1 0h3m1 0h1m1 0h1m1 0h2m2 0h1m-49 1h2m1 0h1m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m1 0h3m1 0h3m1 0h3m1 0h6m3 0h1m1 0h1m2 0h1m1 0h2m-47 1h3m2 0h2m1 0h1m2 0h1m4 0h1m2 0h1m3 0h2m4 0h2m1 0h1m2 0h1m4 0h2m3 0h2m-48 1h1m3 0h2m1 0h1m3 0h1m2 0h3m2 0h8m1 0h1m1 0h2m3 0h1m1 0h2m1 0h3m1 0h2m1 0h1m-48 1h3m3 0h3m1 0h2m1 0h2m2 0h1m2 0h2m1 0h3m1 0h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h2m4 0h1m-48 1h3m3 0h3m1 0h4m1 0h2m1 0h9m4 0h2m1 0h1m1 0h2m2 0h9m-41 1h2m3 0h1m1 0h3m4 0h1m3 0h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h1m3 0h1m3 0h1m-49 1h7m1 0h3m1 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h1m1 0h2m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h1m1 0h3m-49 1h1m5 0h1m1 0h1m3 0h4m2 0h2m2 0h1m3 0h1m3 0h1m1 0h1m1 0h7m3 0h1m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m3 0h6m1 0h1m2 0h10m1 0h1m2 0h1m1 0h3m1 0h6m2 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h2m3 0h2m3 0h3m2 0h1m2 0h1m3 0h1m3 0h1m1 0h1m1 0h4m-47 1h1m1 0h3m1 0h1m2 0h1m1 0h3m2 0h3m4 0h1m3 0h2m5 0h3m4 0h1m1 0h2m2 0h2m-49 1h1m5 0h1m1 0h1m5 0h1m1 0h1m1 0h2m1 0h1m1 0h3m2 0h1m4 0h1m2 0h1m2 0h1m1 0h1m1 0h1m-44 1h7m4 0h1m1 0h1m1 0h1m1 0h6m1 0h1m1 0h4m1 0h3m1 0h3m2 0h1m2 0h1m1 0h1m1 0h2"/></svg><figcaption>Scan to open the video of 2026-05-29</figcaption></figure></div>
+    </article><h2 class="month">June 2026</h2>
+    <article class="entry" data-cat="Permit">
+      <div class="when"><span class="day">02</span><span class="mon">Jun 2026</span></div>
+      <div class="body">
+        <p class="cat">Permit</p>
+        <h3>Permit expiration date changed</h3>
+        <p>Permit card revised (r2), detected at the 19:00 check. Expiration date changed from 2026-08-02 to 2026-12-01. Status now reads &#x27;Issued - extension granted&#x27;. File size changed by +0.01 KB.</p>
+        <ul class="src"><li><a href="files/BP-26-0142_Permit_Card_r1.pdf">BP-26-0142_Permit_Card_r1.pdf</a><span class="tag">DOC-001</span><span class="tag">City portal</span><span class="tag">r1</span><span class="hash" title="SHA-256 283451b39104af5e063197eb38fde992eb596dd3701c0d61fae690861714b57b">SHA-256 283451b39104</span></li><li><a href="files/BP-26-0142_Permit_Card_r2.pdf">BP-26-0142_Permit_Card_r2.pdf</a><span class="tag">DOC-007</span><span class="tag">City portal</span><span class="tag">r2</span><span class="hash" title="SHA-256 cf840535697c692da19069dd572b29502a50587c8210cf2965bbb6d78cc3cdfc">SHA-256 cf840535697c</span></li></ul>
+        
+      </div>
+      
+    </article>
+    <article class="entry" data-cat="Procore">
+      <div class="when"><span class="day">02</span><span class="mon">Jun 2026</span></div>
+      <div class="body">
+        <p class="cat">Procore</p>
+        <h3>Procore file list changed</h3>
+        <p>At the 19:00 check: RFI 007 response added; Site Logistics Draft no longer listed; the A-101 Rev 1 file name changed from one space to two spaces between &#x27;Floor&#x27; and &#x27;Plan&#x27; (content unchanged, same hash).</p>
+        <ul class="src"><li><a href="files/RFI-007_Response.pdf">RFI-007_Response.pdf</a><span class="tag">DOC-008</span><span class="tag">Procore</span><span class="tag">-</span><span class="hash" title="SHA-256 d12174a6e15b49eba759336bdb8b4068dae8ecfdfb1d66cbb1ecb0000c62de32">SHA-256 d12174a6e15b</span></li><li><a href="files/Site_Logistics_Draft.pdf">Site_Logistics_Draft.pdf</a><span class="tag">DOC-006</span><span class="tag">Procore</span><span class="tag">Draft</span><span class="hash" title="SHA-256 ef8c9b1ae6e32434c4c4b27d4533ffc42b5c8381c96aee6bdd9b5bdc5beb9fe9">SHA-256 ef8c9b1ae6e3</span></li><li><a href="files/A-101_Floor_Plan_Rev1.pdf">A-101_Floor_Plan_Rev1.pdf</a><span class="tag">DOC-004</span><span class="tag">Procore</span><span class="tag">Rev 1</span><span class="hash" title="SHA-256 476cbbc328a4d89fc39e3a0cae64dba941abb06a8cef21c3e201f3c10b8b93a8">SHA-256 476cbbc328a4</span></li></ul>
+        
+      </div>
+      
+    </article><h2 class="month">July 2026</h2>
+    <article class="entry" data-cat="Inspection">
+      <div class="when"><span class="day">08</span><span class="mon">Jul 2026</span></div>
+      <div class="body">
+        <p class="cat">Inspection</p>
+        <h3>Framing re-inspection approved</h3>
+        <p>Inspection result for the framing re-inspection: Approved. Inspector ID 0457.</p>
+        <ul class="src"><li><a href="files/INSP-0708_Framing_Result.pdf">INSP-0708_Framing_Result.pdf</a><span class="tag">DOC-009</span><span class="tag">City portal</span><span class="tag">-</span><span class="hash" title="SHA-256 821e99e0df3aa0820167094a1dd224d8e80d33f09c5f44a7928c41feb71f98ae">SHA-256 821e99e0df3a</span></li></ul>
+        
+      </div>
+      
+    </article>
+<footer>Source: data/document_log.csv and data/video_log.csv. Entries are sorted by record date. Video copies are byte-for-byte copies of the camera originals (same hash); originals are never edited, trimmed or re-encoded.</footer>
+</div>
+<script>
+const buttons=document.querySelectorAll('.filters button');
+buttons.forEach(b=>b.addEventListener('click',()=>{
+  buttons.forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true');
+  const c=b.dataset.cat;
+  document.querySelectorAll('.entry').forEach(e=>{e.hidden=!(c==='All'||e.dataset.cat===c)});
+  document.querySelectorAll('h2.month').forEach(h=>{
+    let n=h.nextElementSibling,any=false;
+    while(n&&n.classList.contains('entry')){if(!n.hidden)any=true;n=n.nextElementSibling}
+    h.hidden=!any;
+  });
+}));
+</script>
+</body>
+</html>

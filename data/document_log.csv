@@ -1,0 +1,10 @@
+doc_id,first_seen,source,file_name,version,status,size_bytes,size_kb,sha256,pdf_created,pdf_modified,notes
+DOC-001,2026-02-03,City portal,BP-26-0142_Permit_Card_r1.pdf,r1,Issued,1892,1.85,283451b39104af5e063197eb38fde992eb596dd3701c0d61fae690861714b57b,D:20260203091200-04'00',D:20260203091200-04'00',"Permit card, expiration 2026-08-02"
+DOC-002,2026-02-10,Procore,A-101_Floor_Plan_Rev0.pdf,Rev 0,Current,1704,1.66,25dc9ad63286499358acad126c6c04d16875d93d312dbb41ebc7d2a630756d47,D:20260210140000-04'00',D:20260210140000-04'00',"Floor plan, first issue"
+DOC-003,2026-03-18,City portal,INSP-0318_Foundation_Result.pdf,-,Approved,1542,1.51,d3dc4226e6bd348f05fc81926d7897dbc3956f785d0e3cff794b5cc0df2f535a,D:20260318160500-04'00',D:20260318160500-04'00',Foundation inspection result
+DOC-004,2026-04-07,Procore,A-101_Floor_Plan_Rev1.pdf,Rev 1,Current,1704,1.66,476cbbc328a4d89fc39e3a0cae64dba941abb06a8cef21c3e201f3c10b8b93a8,D:20260210140000-04'00',D:20260407112500-04'00',Supersedes DOC-002
+DOC-005,2026-05-14,City portal,INSP-0514_Framing_Correction_Notice.pdf,-,Failed,1656,1.62,1679fb07288a4cda3a3f7da124303250f7952fc61746742f19af192e5c445ff3,D:20260514173000-04'00',D:20260514173000-04'00',"Framing correction notice, 2 items"
+DOC-006,2026-05-20,Procore,Site_Logistics_Draft.pdf,Draft,Removed 2026-06-02,1551,1.51,ef8c9b1ae6e32434c4c4b27d4533ffc42b5c8381c96aee6bdd9b5bdc5beb9fe9,D:20260520090000-04'00',D:20260520090000-04'00',No longer listed in Procore at the 19:00 check
+DOC-007,2026-06-02,City portal,BP-26-0142_Permit_Card_r2.pdf,r2,Issued - extension,1907,1.86,cf840535697c692da19069dd572b29502a50587c8210cf2965bbb6d78cc3cdfc,D:20260203091200-04'00',D:20260602154100-04'00',Expiration changed 2026-08-02 -> 2026-12-01
+DOC-008,2026-06-02,Procore,RFI-007_Response.pdf,-,Answered,1607,1.57,d12174a6e15b49eba759336bdb8b4068dae8ecfdfb1d66cbb1ecb0000c62de32,D:20260602130200-04'00',D:20260602130200-04'00',New file at the 19:00 check
+DOC-009,2026-07-08,City portal,INSP-0708_Framing_Result.pdf,-,Approved,1579,1.54,821e99e0df3aa0820167094a1dd224d8e80d33f09c5f44a7928c41feb71f98ae,D:20260708105000-04'00',D:20260708105000-04'00',Framing re-inspection result

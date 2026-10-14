@@ -1,0 +1,103 @@
+{
+  "city_portal/BP-26-0142 Permit Card.pdf": {
+    "size_bytes": 1907,
+    "sha256": "cf840535697c692da19069dd572b29502a50587c8210cf2965bbb6d78cc3cdfc",
+    "meta": {
+      "/Title": "Permit Card BP-26-0142",
+      "/Author": "Sample City Building Department",
+      "/Creator": "Demo generator",
+      "/Producer": "ReportLab + pypdf",
+      "/CreationDate": "D:20260203091200-04'00'",
+      "/ModDate": "D:20260602154100-04'00'"
+    },
+    "first_page": [
+      "FICTIONAL SAMPLE - NOT A REAL DOCUMENT",
+      "Sample City Building Department - Building Permit",
+      "Sample Residence - 100 Example Lane",
+      "Permit number: BP-26-0142",
+      "Permit type: New single-family residence",
+      "Status: Issued - extension granted",
+      "Issue date: 2026-02-03",
+      "Expiration date: 2026-12-01",
+      "Card revision: 2",
+      "Contractor: Example Builders LLC (fictional)",
+      "Keep this card visible on site. Inspections must be requested through the portal."
+    ],
+    "signature_fields": 0,
+    "pages": 1
+  },
+  "city_portal/INSP-0514 Correction Notice.pdf": {
+    "size_bytes": 1656,
+    "sha256": "1679fb07288a4cda3a3f7da124303250f7952fc61746742f19af192e5c445ff3",
+    "meta": {
+      "/Title": "Correction Notice - Framing",
+      "/Author": "Sample City Building Department",
+      "/Creator": "Demo generator",
+      "/Producer": "ReportLab + pypdf",
+      "/CreationDate": "D:20260514173000-04'00'",
+      "/ModDate": "D:20260514173000-04'00'"
+    },
+    "first_page": [
+      "FICTIONAL SAMPLE - NOT A REAL DOCUMENT",
+      "Correction Notice - Framing",
+      "Sample Residence - 100 Example Lane",
+      "Inspection date: 2026-05-14",
+      "Inspection type: Framing",
+      "Result: FAILED",
+      "Item 1: Missing hold-down at west wall, grid line 1.",
+      "Item 2: Header size at W1 does not match approved sheet A-101 Rev 1.",
+      "Re-inspection required."
+    ],
+    "signature_fields": 0,
+    "pages": 1
+  },
+  "procore/A-101_Floor  Plan_Rev1.pdf": {
+    "size_bytes": 1704,
+    "sha256": "476cbbc328a4d89fc39e3a0cae64dba941abb06a8cef21c3e201f3c10b8b93a8",
+    "meta": {
+      "/Title": "A-101 Floor Plan Rev 1",
+      "/Author": "Example Architects",
+      "/Creator": "Demo generator",
+      "/Producer": "ReportLab + pypdf",
+      "/CreationDate": "D:20260210140000-04'00'",
+      "/ModDate": "D:20260407112500-04'00'"
+    },
+    "first_page": [
+      "FICTIONAL SAMPLE - NOT A REAL DOCUMENT",
+      "A-101 Floor Plan - Rev 1",
+      "Sample Residence - 100 Example Lane",
+      "LIVING",
+      "BEDROOM",
+      "W1 5-6",
+      "Sheet: A-101",
+      "Revision: 1",
+      "Date: 2026-04-07",
+      "Example Architects (fictional)"
+    ],
+    "signature_fields": 0,
+    "pages": 1
+  },
+  "procore/RFI-007_Response.pdf": {
+    "size_bytes": 1607,
+    "sha256": "d12174a6e15b49eba759336bdb8b4068dae8ecfdfb1d66cbb1ecb0000c62de32",
+    "meta": {
+      "/Title": "RFI 007 - Response",
+      "/Author": "Example Engineers",
+      "/Creator": "Demo generator",
+      "/Producer": "ReportLab + pypdf",
+      "/CreationDate": "D:20260602130200-04'00'",
+      "/ModDate": "D:20260602130200-04'00'"
+    },
+    "first_page": [
+      "FICTIONAL SAMPLE - NOT A REAL DOCUMENT",
+      "RFI 007 - Response",
+      "Sample Residence - 100 Example Lane",
+      "Question: Confirm header size at W1 after Rev 1 widening.",
+      "Answer: Use 2-ply LVL 1-3/4 x 11-7/8 per structural note S-3.",
+      "Answered by: Example Engineers (fictional)",
+      "Date: 2026-06-02"
+    ],
+    "signature_fields": 0,
+    "pages": 1
+  }
+}
